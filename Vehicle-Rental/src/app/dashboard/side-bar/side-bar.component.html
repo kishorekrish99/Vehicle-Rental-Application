@@ -1,0 +1,14 @@
+<!-- home, vehicles, transactions, current transactions, user details -->
+<div class="sidebar">
+  <div class="sidebar-header mb-3">
+    Vehicle
+  </div>
+
+    <div class="individual-section full-width mb-3" [ngClass]="selected=='home' ? 'selected' : ''" (click)="changeType('home')">Home</div>
+    <div class="individual-section full-width mb-3" [ngClass]="selected=='vehicles' ? 'selected' : ''" (click)="changeType('vehicles')">Vehicles</div>
+    <div class="individual-section full-width mb-3" [ngClass]="selected=='transactions' ? 'selected' : ''" (click)="changeType('transactions')">Transactions</div>
+    <div class="individual-section full-width mb-3" [ngClass]="selected=='currentTransactions' ? 'selected' : ''" (click)="changeType('currentTransactions')">Current Transactions</div>
+    <div class="individual-section full-width mb-3" [ngClass]="selected=='userDetails' ? 'selected' : ''" (click)="changeType('userDetails')">User Details</div>
+    <!-- <div *ngIf="isAdmin" class="individual-section full-width mb-3" [ngClass]="selected=='users' ? 'selected' : ''" (click)="changeType('users')">Users</div> -->
+    <div class="individual-section full-width mb-3 text-danger" (click)="logout()">Logout</div>
+</div>

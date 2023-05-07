@@ -1,0 +1,65 @@
+[{
+  "_id": 484125,
+  "brand": "Kia",
+  "fuelType": "Petrol",
+  "model": "Forte",
+  "purchaseDate": {
+    "$date": "2023-05-03T18:30:00.000Z"
+  },
+  "type": "Coupe",
+  "availability": true,
+  "color": "Black",
+  "number": "AAP-094",
+  "price": 1698,
+  "uniqueId": 0,
+  "fuelquantity": "Quarter",
+  "_class": "com.vehicle.rental.models.Vehicles"
+},{
+  "_id": 215548,
+  "brand": "Toyota",
+  "fuelType": "Petrol",
+  "model": "Corolla",
+  "purchaseDate": {
+    "$date": "2022-02-13T18:30:00.000Z"
+  },
+  "type": "Sedan",
+  "availability": false,
+  "color": "Black",
+  "number": "ABC-1234",
+  "price": 15000,
+  "uniqueId": 174012,
+  "fuelquantity": "Full",
+  "_class": "com.vehicle.rental.models.Vehicles"
+},{
+  "_id": 99098,
+  "brand": "Kia",
+  "fuelType": "Petrol",
+  "model": "K55",
+  "purchaseDate": {
+    "$date": "2022-02-13T18:30:00.000Z"
+  },
+  "type": "Sedannnnn",
+  "availability": true,
+  "color": "Blackkk",
+  "number": "ABC-1234",
+  "price": 15000,
+  "uniqueId": 987653,
+  "fuelquantity": "Full",
+  "_class": "com.vehicle.rental.models.Vehicles"
+},{
+  "_id": 654619,
+  "brand": "Chevy",
+  "fuelType": "Petrol",
+  "model": "Malibu",
+  "purchaseDate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "type": "SUV",
+  "availability": true,
+  "color": "Blue",
+  "number": "KXU 52 LOK",
+  "price": 100,
+  "uniqueId": 737226,
+  "fuelquantity": "Half",
+  "_class": "com.vehicle.rental.models.Vehicles"
+}]

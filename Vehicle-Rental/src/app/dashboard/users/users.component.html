@@ -1,0 +1,35 @@
+<div style="padding:5em">
+    <h5 align="center">USERS</h5>
+
+</div>
+
+<div style="padding-top : 2em;  padding-left:2em;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"><b>"Username</b></th>
+          <th scope="col"><b>"Email</b></th>
+          <th scope="col"><b>"address1</b></th>
+          <th scope="col"><b>"address2</b></th>
+          <th scope="col"><b>"Age</b></th>
+          <th scope="col"><b>"Mobile</b></th>
+          <th scope="col"><b>"City</b></th>
+          <th scope="col"><b>"PostCode</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <th scope="row">{{user.username}}</th>
+          <td>{{user.email}}</td>
+          <td>{{user.address1}}</td>
+          <td>{{user.address2}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.mobile}}</td>
+          <td>{{user.city}}</td>
+          <td>{{user.postcode}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  

@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-1 col-md-1 col-sm-1 dashboard">
+        <app-side-bar (selectedType)="changeType($event)"></app-side-bar>
+    </div>
+    <div class="col-11 col-md-11 col-sm-11">
+        <app-home-details *ngIf="selectedType == 'home'"></app-home-details>
+        <app-vehicles *ngIf="selectedType == 'vehicles'"></app-vehicles>
+        <app-transactions *ngIf="selectedType == 'transactions'"></app-transactions>
+        <app-current-transactions *ngIf="selectedType == 'currentTransactions'"></app-current-transactions>
+        <app-user-details *ngIf="selectedType == 'userDetails'"></app-user-details>
+        <app-users *ngIf="selectedType == 'users'"></app-users>
+    </div>
+</div>

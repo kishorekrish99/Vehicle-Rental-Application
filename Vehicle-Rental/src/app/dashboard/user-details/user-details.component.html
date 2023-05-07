@@ -1,0 +1,115 @@
+<div *ngIf="selectedFlow=='details'">
+  <div style="padding-top : 2em">
+    <h1 align="center">Details</h1>
+  </div>
+
+  <div style="padding-left: 10em;padding-top : 5em">
+    <p>Username : {{users?.username}} </p>
+    <p>Email : {{users?.email}}</p>
+    <p>Role : {{users?.roles[0]?.name}}</p>
+    <p *ngIf="users?.address1">Address1 : {{users?.address1}} </p>
+    <p *ngIf="users?.address2">Address2 : {{users?.address2}} </p>
+    <p *ngIf="users?.age !== 0">Age : {{users?.age}}</p>
+    <p *ngIf="users?.mobile !== 0">Mobile : {{users?.mobile}}</p>
+    <p *ngIf="users?.postcode !== 0">Postcode : {{users?.postcode}}</p>
+    <p *ngIf="users?.town">Town : {{users?.town}}</p>
+
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="addcards()">Add Cards</button>
+  </div>
+  <div style="padding :5em" *ngIf="cards?.length>0 && cards[0]?.length>0">
+    <h5 align="center">Card Details </h5>
+    <div style="padding-top : 2em">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Card Number</th>
+            <th scope="col">Month</th>
+            <th scope="col">Year</th>
+            <th scope="col">Card Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let card of cards[0]">
+            <td scope="row">{{card?.id}}</td>
+            <td>{{card.name}}</td>
+            <td>{{card.number}}</td>
+            <td>{{card.month}}</td>
+            <td>{{card.year}}</td>
+            <td>{{card.cardtype}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Add card -->
+<div  *ngIf="selectedFlow == 'addCard'">
+  <div>
+    <h4  align="center">Add Card</h4>
+  </div>
+  
+  <div style="padding-top : 2em" >
+    <form [formGroup]="addCardForm" (submit)="addCard()">  
+      <div class="form-group">
+        <label for="name">Name </label>
+        <input type="name" class="form-control" id="name" formControlName="name">
+        <div class="text-danger" *ngIf="addCardForm.get('name').touched && addCardForm.get('name').invalid">
+          <div *ngIf="addCardForm.get('name').errors.required">Name is required</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="number"> Card Number </label>
+        <input type="number" class="form-control" id="number" formControlName="number">
+        <div class="text-danger" *ngIf="addCardForm.get('number').touched && addCardForm.get('number').invalid">
+          <div *ngIf="addCardForm.get('number').errors.required">Card Number is required</div>
+          <div *ngIf="addCardForm.get('number').errors.minlength">Card Number should be 16 digits</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="month">Month</label>
+        <input type="number" class="form-control" id="month" formControlName="month">
+        <div class="text-danger" *ngIf="addCardForm.get('month').touched && addCardForm.get('month').invalid">
+          <div *ngIf="addCardForm.get('month').errors.required">Month is required</div>
+        </div>
+      </div>
+  
+       <div class="form-group">
+        <label for="year">Year</label>
+        <input type="number" class="form-control" id="year" formControlName="year">
+        <div class="text-danger" *ngIf="addCardForm.get('year').touched && addCardForm.get('year').invalid">
+          <div *ngIf="addCardForm.get('year').errors.required">Year is required</div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="cvv">CVV </label>
+        <input type="password" class="form-control" id="cvv" formControlName="cvv">
+        <div class="text-danger" *ngIf="addCardForm.get('cvv').touched && addCardForm.get('cvv').invalid">
+          <div *ngIf="addCardForm.get('cvv').errors.required">CVV is required</div>
+          <div *ngIf="addCardForm.get('cvv').errors.minlength">CVV should be 3 digits</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="cardtype">Card Type </label>
+        <select formControlName="cardtype" class="form-control">
+          <option selected *ngFor="let cardtype of cardtypelist" [value]="cardtype">
+            {{cardtype}}
+          </option>
+        </select>
+        <div class="text-danger" *ngIf="addCardForm.get('cardtype').touched && addCardForm.get('cardtype').invalid">
+          <div *ngIf="addCardForm.get('cardtype').errors.required">Card Type is required</div>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Add Card</button>
+    </form>
+  </div>
+</div>

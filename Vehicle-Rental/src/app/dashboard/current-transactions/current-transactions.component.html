@@ -1,0 +1,42 @@
+<div style="padding-top : 2em">
+    <H1 align="center">Current Transactions</H1>
+</div>
+
+<div style="padding-top : 2em">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Pickup Date</th>
+        <th scope="col">pickup Location</th>
+        <th scope="col">pickup Time</th>
+        <th scope="col">Return Date</th>
+        <th scope="col">Return Location</th>
+        <th scope="col">Return Time</th>
+        <th scope="col">Return Fuel Quantity</th>
+        <th scope="col">Insurence Status</th>
+        <!-- <th scope="col">Miscellaneous</th>
+        <th scope="col">Comment</th> -->
+        <th><a href="">Return</a></th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let transaction of transactions">
+      <th scope="row">{{transaction?.id}}</th>
+        <td>{{transaction?.pickupdate}}</td>
+        <td>{{transaction?.pickuplocation}}</td>
+        <td>{{transaction?.pickuptime}}</td>
+        <td>{{transaction?.returndate}}</td>
+        <td>{{transaction?.returnlocation}}</td>
+        <td>{{transaction?.returntime}}</td>
+        <td>{{transaction?.returnfuelquantity}}</td>
+        <td>{{transaction?.insurencestatus}}</td>
+        <!-- <td>{{transaction?.miscellaneous}}</td>
+        <td>{{transaction?.comments}}</td> -->
+        <td><button type="button" class="btn btn-primary" (click)="returnVehicle(transaction)">Return</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+</div>

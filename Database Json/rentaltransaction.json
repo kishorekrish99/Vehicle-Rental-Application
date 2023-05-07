@@ -1,0 +1,235 @@
+[{
+  "_id": 0,
+  "active": false,
+  "amount": 18000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-03T18:30:00.000Z"
+  },
+  "pickuplocation": "Michigan",
+  "pickuptime": {
+    "$date": "2023-05-04T05:53:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "returnlocation": "Georgia",
+  "returntime": {
+    "$date": "2023-05-04T05:53:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 0,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 1,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 763322,
+  "active": false,
+  "amount": 18000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-04-30T18:30:00.000Z"
+  },
+  "pickuplocation": "New Jersey",
+  "pickuptime": {
+    "$date": "2023-05-05T06:30:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-19T18:30:00.000Z"
+  },
+  "returnlocation": "New Jersey",
+  "returntime": {
+    "$date": "2023-05-05T04:30:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 340500,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 2,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 922508,
+  "active": false,
+  "amount": 15000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-03T18:30:00.000Z"
+  },
+  "pickuplocation": "Virginia",
+  "pickuptime": {
+    "$date": "2023-05-05T06:07:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "returnlocation": "Virginia",
+  "returntime": {
+    "$date": "2023-05-05T06:07:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": false,
+  "totalamount": 15000,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 3,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 236846,
+  "active": false,
+  "amount": 1698,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "pickuplocation": "Washington",
+  "pickuptime": {
+    "$date": "2023-05-05T05:16:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-08T18:30:00.000Z"
+  },
+  "returnlocation": "North Carolina",
+  "returntime": {
+    "$date": "2023-05-05T05:16:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 6792,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 484125,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 813442,
+  "active": false,
+  "amount": 15000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "pickuplocation": "New York",
+  "pickuptime": {
+    "$date": "2023-05-05T05:18:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-05T18:30:00.000Z"
+  },
+  "returnlocation": "North Carolina",
+  "returntime": {
+    "$date": "2023-05-05T05:18:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 15000,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 215548,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 708622,
+  "active": false,
+  "amount": 15000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "pickuplocation": "Texas",
+  "pickuptime": {
+    "$date": "2023-05-05T06:34:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-05T18:30:00.000Z"
+  },
+  "returnlocation": "Georgia",
+  "returntime": {
+    "$date": "2023-05-05T06:34:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 15000,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 215548,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 186520,
+  "active": false,
+  "amount": 15000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "pickuplocation": "Illinois",
+  "pickuptime": {
+    "$date": "2023-05-05T06:41:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-05T18:30:00.000Z"
+  },
+  "returnlocation": "Pennsylvania",
+  "returntime": {
+    "$date": "2023-05-05T06:41:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 15000,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 215548,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 373057,
+  "active": false,
+  "amount": 15000,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "pickuplocation": "Pennsylvania",
+  "pickuptime": {
+    "$date": "2023-05-06T04:30:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-05T18:30:00.000Z"
+  },
+  "returnlocation": "North Carolina",
+  "returntime": {
+    "$date": "2023-05-06T06:30:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 16250,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 99098,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+},{
+  "_id": 698388,
+  "active": false,
+  "amount": 100,
+  "discount": 10,
+  "pickupdate": {
+    "$date": "2023-05-04T18:30:00.000Z"
+  },
+  "pickuplocation": "Washington",
+  "pickuptime": {
+    "$date": "2023-05-06T05:30:00.000Z"
+  },
+  "returndate": {
+    "$date": "2023-05-05T18:30:00.000Z"
+  },
+  "returnlocation": "New York",
+  "returntime": {
+    "$date": "2023-05-06T06:30:00.000Z"
+  },
+  "username": "kishore",
+  "insurencestatus": true,
+  "totalamount": 104,
+  "miscellaneous": "not yet returned the vehicle",
+  "comments": "not yet returned the vehicle",
+  "vehicleid": 654619,
+  "_class": "com.vehicle.rental.models.rentaltransaction"
+}]

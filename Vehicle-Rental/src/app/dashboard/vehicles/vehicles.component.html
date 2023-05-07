@@ -1,0 +1,192 @@
+<div style="padding-top : 2em">
+  <h1 align="center">VEHICLES</h1>
+</div>
+
+<div style="padding-left:75em;padding-top : 2em;">
+  <button type="button" class="btn btn-primary" (click)="addVehicle()" *ngIf="isAdmin">Add Vehicle</button>
+
+</div>
+<div style="padding-top : 2em;padding-left:2em;padding-right:2em" *ngIf="selectedFlow=='view'">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Model</th>
+        <th scope="col">Fuel Type</th>
+        <th scope="col">Purchase Date</th>
+        <th scope="col">Type</th>
+        <th scope="col">Color</th>
+        <th scope="col">Vehicle Number</th>
+        <th scope="col">Fuel Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col" *ngIf="isUser && !isAdmin">Book</th>
+        <th scope="col" *ngIf="isAdmin">Edit</th>
+        <th scope="col" *ngIf="isAdmin">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of vehicles">
+        <th scope="row">{{vehicle.id}}</th>
+        <td>{{vehicle.brand}}</td>
+        <td>{{vehicle.model}}</td>
+        <td>{{vehicle.fuelType}}</td>
+        <td>{{vehicle.purchaseDate}}</td>
+        <td>{{vehicle.type}}</td>
+        <td>{{vehicle.color}}</td>
+        <td>{{vehicle.number}}</td>
+        <td>{{vehicle.fuelquantity}}</td>
+        <td>{{vehicle.price}}</td>
+        <td *ngIf="isUser && !isAdmin"><button type="button" class="btn btn-primary" (click)="bookVehicle(vehicle)">Book</button></td>
+        <td *ngIf="isAdmin"><button type="button" class="btn btn-primary" (click)="editVehicle(vehicle)">Edit</button></td>
+        <td *ngIf="isAdmin"><button type="button" class="btn btn-primary" (click)="deleteVehicle(vehicle)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="padding-top : 2em" *ngIf="selectedFlow=='book'">
+  <form [formGroup]="bookForm" (submit)="updateTransaction()">
+    <div class="form-group">
+      <label for="insuarance">Insurance Taken? <span class="text-danger">*</span></label>
+
+      <input type="radio" class="form-check-input" value=true id="insuranceYes" formControlName="insuarance" checked>
+      <label class="form-check-label" for="insuranceYes"> Yes </label>
+
+      <input type="radio" class="form-check-input" value=false id="insuranceNo" formControlName="insuarance">
+      <label class="form-check-label" for="insuranceNo"> No </label>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Price </label>
+      <input type="number" class="form-control" id="amount" formControlName="amount">
+    </div>
+
+    <div class="form-group">
+      <label for="model">Model </label>
+      <input type="text" class="form-control" id="model" formControlName="model">
+    </div>
+
+    <!-- pickup date -->
+    <div class="form-group">
+      <label for="pickupDate">Pickup Date </label>
+      <input type="text" class="form-control" id="pickupDate" formControlName="pickupDate">
+    </div>
+
+    <!-- pickup location -->
+    <div class="form-group">
+      <label for="pickupLocation">Pickup Location </label>
+      <select formControlName="pickupLocation" class="form-control">
+        <option selected *ngFor="let location of locationList" [value]="location">
+          {{location}}
+        </option>
+      </select>
+    </div>
+
+    <!-- pickup time -->
+    <div class="form-group">
+      <label for="pickupTime">Pickup Time </label>
+      <input type="text" class="form-control" id="pickupTime" formControlName="pickupTime">
+    </div>
+
+    <!-- return date -->
+    <div class="form-group">
+      <label for="returnDate">Return Date </label>
+      <input type="text" class="form-control" id="returnDate" formControlName="returnDate">
+    </div>
+
+    <!-- return location -->
+    <div class="form-group">
+      <label for="returnLocation">Return Location </label>
+      <select formControlName="returnLocation" class="form-control">
+        <option selected *ngFor="let location of locationList" [value]="location">
+          {{location}}
+        </option>
+      </select>
+    </div>
+
+    <!-- return time -->
+    <div class="form-group">
+      <label for="returnTime">Return Time </label>
+      <input type="text" class="form-control" id="returnTime" formControlName="returnTime">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book</button>
+  </form>
+</div>
+
+
+<div style="padding-top : 2em; margin-left: 2em" *ngIf="selectedFlow=='add' || selectedFlow=='edit'">
+  <form [formGroup]="addForm" (submit)="addVehicles(selectedFlow)">
+    
+    <div class="form-group">
+      <label for="brand">Brand </label>
+      <input type="text" class="form-control" id="brand" formControlName="brand">
+    </div>
+
+    <div class="form-group">
+      <label for="model">Model </label>
+      <input type="text" class="form-control" id="model" formControlName="model">
+    </div>
+
+    <div class="form-group">
+      <label for="fuelType">Fuel Type </label>
+      <select formControlName="fuelType" class="form-control">
+        <option selected *ngFor="let fuel of fuelTypeList" [value]="fuel">
+          {{fuel}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="purchaseDate">Purchase Date </label>
+      <input type="text" class="form-control" id="purchaseDate" formControlName="purchaseDate">
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type </label>
+      <select formControlName="type" class="form-control">
+        <option selected *ngFor="let type of typeList" [value]="type">
+          {{type}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="color">Color </label>
+      <input type="text" class="form-control" id="color" formControlName="color">
+    </div>
+
+    <div class="form-group">
+      <label for="number">Vehicle Number </label>
+      <input type="text" class="form-control" id="number" formControlName="number">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price </label>
+      <input type="number" class="form-control" id="price" formControlName="price">
+    </div>
+
+    <div class="form-group">
+      <label for="fuelquantity">Fuel Quantity </label>
+      <select class="form-control" id="fuelquantity" formControlName="fuelquantity">
+        <option selected *ngFor="let fuel of fuelQuantityList" [value]="fuel">
+          {{fuel}}
+        </option>
+      </select>
+    </div>
+
+    <!-- radio button for availability -->
+    <div class="form-group">
+      <label for="availability">Availability <span class="text-danger">*</span></label>
+
+      <input type="radio" class="form-check-input" value=true id="availabilityTrue" formControlName="availability" checked>
+      <label class="form-check-label" for="availabilityTrue"> Yes </label>
+
+      <input type="radio" class="form-check-input" value=false id="availabilityFalse" formControlName="availability">
+      <label class="form-check-label" for="availabilityFalse"> No </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{selectedFlow=='add' ? 'Add Vehicle' : 'Edit Vehicle'}}</button>
+  </form>
+</div>

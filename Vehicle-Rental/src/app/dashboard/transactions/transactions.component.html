@@ -1,0 +1,46 @@
+<div style="padding-top : 2em">
+    <H1 align="center">Transactions</H1>
+</div>
+
+
+<div style="padding-top : 2em">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Model</th>
+        <th scope="col">Pickup Date</th>
+        <th scope="col">pickup Location</th>
+        <th scope="col">pickup Time</th>
+        <th scope="col">Return Date</th>
+        <th scope="col">Return Location</th>
+        <th scope="col">Return Time</th>
+        <th scope="col">Return Fuel Quantity</th>
+        <th scope="col">Insurence Status</th>
+        <!-- <th scope="col">Miscellaneous</th>
+        <th scope="col">Comment</th> -->
+        <th scope="col">Total Amount</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Transaction of transactions">
+        <th scope="row">{{Transaction.id}}</th>
+          <td>{{Transaction.model}}</td>
+          <td>{{Transaction.pickupdate}}</td>
+          <td>{{Transaction.pickuplocation}}</td>
+          <td>{{Transaction.pickuptime}}</td>
+          <td>{{Transaction.returndate}}</td>
+          <td>{{Transaction.returnlocation}}</td>
+          <td>{{Transaction.returntime}}</td>
+          <td>{{Transaction.returnfuelquantity}}</td>
+          <td>{{Transaction.insurencestatus}}</td>
+          <!-- <td>{{Transaction.miscellaneous}}</td>
+          <td>{{Transaction.comments}}</td> -->
+          <td>{{Transaction.totalamount}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+</div>
